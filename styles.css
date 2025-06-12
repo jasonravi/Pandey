@@ -1,3 +1,4 @@
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -215,54 +216,90 @@ nav ul li a.cta-btn:hover {
 .attorneys-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  padding: 2rem 0;
 }
 
 .attorney-card {
   background: var(--white);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .attorney-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .attorney-card img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
+  object-position: center top;
+  transition: all 0.5s ease;
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.attorney-card:hover img {
+  transform: scale(1.05);
+}
+
+.attorney-card .content-wrapper {
+  padding: 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 1)
+  );
 }
 
 .attorney-card h3 {
-  padding: 1.5rem 1.5rem 0.5rem;
   color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-.attorney-card .position,
+.attorney-card .position {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
 .attorney-card .specialty {
-  padding: 0 1.5rem;
-  color: var(--text-color);
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
 .attorney-contact {
   display: flex;
   gap: 1rem;
-  padding: 1.5rem;
-  border-top: 1px solid #eee;
   margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .attorney-contact a {
+  background-color: var(--light-gray);
   color: var(--primary-color);
-  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .attorney-contact a:hover {
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-3px);
 }
 
 /* Consultation Section */
@@ -481,6 +518,24 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .attorneys-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .attorney-card img {
+    height: 300px;
+  }
+
+  .attorney-card .content-wrapper {
+    padding: 1.2rem;
+  }
+
+  .attorney-card h3 {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -497,6 +552,18 @@ footer {
   .consultation h2,
   .contact h2 {
     font-size: 2rem;
+  }
+
+  .attorney-card img {
+    height: 250px;
+  }
+
+  .attorney-card .content-wrapper {
+    padding: 1rem;
+  }
+
+  .attorney-card h3 {
+    font-size: 1.2rem;
   }
 }
 
