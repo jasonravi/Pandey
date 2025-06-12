@@ -15,6 +15,9 @@
         <i class="fas fa-balance-scale"></i>
         <h1>LegalPro</h1>
       </div>
+      <button class="mobile-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -212,6 +215,37 @@
       </div>
     </div>
   </footer>
+
+  <!-- Add before closing body tag -->
+  <script>
+    // Mobile Navigation Toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav a');
+
+    mobileNavToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      const isOpen = nav.classList.contains('active');
+      mobileNavToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile nav when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Form handling
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Add your form submission logic here
+      alert('Thank you for your message. We will contact you soon!');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
 
