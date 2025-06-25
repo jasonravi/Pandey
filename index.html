@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LegalPro - Professional Legal Services</title>
+  <title>LawOffice - Professional Legal Services</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -15,7 +13,7 @@
     <div class="container">
       <div class="logo">
         <i class="fas fa-balance-scale"></i>
-        <h1>LegalPro</h1>
+        <h1>LawOffice</h1>
       </div>
       <button class="mobile-nav-toggle">
         <i class="fas fa-bars"></i>
@@ -79,47 +77,83 @@
       <h2>Our Expert Attorneys</h2>
       <div class="attorneys-grid">
         <div class="attorney-card">
-          <img src="ravi-ranjan-pandey.jpeg" alt="Attorney Arjun Darekar">
+          <img src="static/images/Arjun Darekar.jpeg" alt="Attorney Arjun Darekar" class="attorney-photo" onclick="openImageModal('static/images/Arjun Darekar.jpeg')">
           <div class="content-wrapper">
             <h3>Arjun Darekar</h3>
-            <p class="position">Senior Partner</p>
-            <p class="specialty">Corporate Law</p>
-            <div class="attorney-contact">
-              <a href="tel:+918105479839" title="Call Arjun"><i class="fas fa-phone"></i></a>
-              <a href="mailto:arjun@legalpro.com" title="Email Arjun"><i class="fas fa-envelope"></i></a>
-              <a href="https://wa.me/911234567890" title="WhatsApp Arjun"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            <p class="position">Principal Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('arjun')">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
-          <img src="arjun-darekar.jpeg" alt="Attorney Ravi Ranjan Pandey">
+          <img src="static/images/Nitin Sahadevan.jpeg" alt="Attorney Nitin Sahadevan" class="attorney-photo" onclick="openImageModal('static/images/Nitin Sahadevan.jpeg')">
           <div class="content-wrapper">
-            <h3>Ravi Ranjan Pandey</h3>
-            <p class="position">Partner</p>
-            <p class="specialty">Civil Litigation</p>
-            <div class="attorney-contact">
-              <a href="tel:+918105479839" title="Call Ravi"><i class="fas fa-phone"></i></a>
-              <a href="mailto:ravi@legalpro.com" title="Email Ravi"><i class="fas fa-envelope"></i></a>
-              <a href="https://wa.me/911234567891" title="WhatsApp Ravi"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            <h3>Nitin Sahadevan</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('nitin')">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
-          <img src="sachin-vairal.jpeg" alt="Attorney Sachin Vairal">
+          <img src="static/images/Pankaj Mishra.jpeg" alt="Attorney Pankaj Mishra" class="attorney-photo" onclick="openImageModal('static/images/Pankaj Mishra.jpeg')">
           <div class="content-wrapper">
-            <h3>Sachin Vairal</h3>
-            <p class="position">Senior Associate</p>
-            <p class="specialty">Real Estate Law</p>
-            <div class="attorney-contact">
-              <a href="tel:+918105479839" title="Call Sachin"><i class="fas fa-phone"></i></a>
-              <a href="mailto:sachin@legalpro.com" title="Email Sachin"><i class="fas fa-envelope"></i></a>
-              <a href="https://wa.me/911234567892" title="WhatsApp Sachin"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            <h3>Pankaj Mishra</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('pankaj')">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sangram Bapat.jpeg" alt="Attorney Sangram Bapat" class="attorney-photo" onclick="openImageModal('static/images/Sangram Bapat.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sangram Bapat</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sangram')">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Razia B. Shaikh.jpeg" alt="Attorney Razia B. Shaikh" class="attorney-photo" onclick="openImageModal('static/images/Razia B. Shaikh.jpeg')">
+          <div class="content-wrapper">
+            <h3>Razia B. Shaikh</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('razia')">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sarika Tripathi.jpeg" alt="Attorney Sarika Tripathi" class="attorney-photo" onclick="openImageModal('static/images/Sarika Tripathi.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sarika Tripathi</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sarika')">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sharad Evalekar.jpeg" alt="Attorney Sharad Evalekar" class="attorney-photo" onclick="openImageModal('static/images/Sharad Evalekar.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sharad Evalekar</h3>
+            <p class="position">Labour Law Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sharad')">Know More</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Attorney Modal -->
+  <div id="attorneyModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="modal-content" style="background-color: #fff; margin: 5% auto; padding: 0; border-radius: 10px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+      <div class="modal-header" style="padding: 1.5rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+        <h2 id="modalTitle" style="margin: 0; color: #2c3e50;"></h2>
+        <span class="close" onclick="closeAttorneyModal()" style="color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+      </div>
+      <div class="modal-body" style="padding: 1.5rem;">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Modal for Enlarged Attorney Photo -->
+  <div id="imageModal" class="modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7);">
+    <span class="close" onclick="closeImageModal()" style="position:absolute;top:30px;right:40px;color:#fff;font-size:40px;font-weight:bold;cursor:pointer;z-index:2100;">&times;</span>
+    <img id="modalLargeImage" src="" alt="Attorney Large" style="display:block;max-width:90vw;max-height:80vh;margin:60px auto 0 auto;border-radius:18px;box-shadow:0 8px 32px rgba(44,62,80,0.25);background:#fff;">
+  </div>
 
   <!-- Free Consultation Section -->
   <section id="consultation" class="consultation">
@@ -147,15 +181,23 @@
           <h3>Get in Touch</h3>
           <div class="info-item">
             <i class="fas fa-map-marker-alt"></i>
-            <p>Zaitoon Apartment, west,<br>Bandu Gore Marg, Jawahar Nagar,<br>Goregaon West, Mumbai,<br>Maharashtra 400062</p>
+            <p>Zaitoon Apartment, A wing, 607<br>Bandu Gore Marg, Jawahar Nagar,<br>Near Goregaon Station<br>Goregaon West, Mumbai,<br>Maharashtra 400062</p>
           </div>
           <div class="info-item">
             <i class="fas fa-phone"></i>
-            <p>+1 (234) 567-8900</p>
+            <a href="tel:9326066607" style="color:inherit;text-decoration:none;">9326066607</a>
           </div>
           <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <p>contact@legalpro.com</p>
+            <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+            <a href="https://wa.me/919819091951" target="_blank" style="color:inherit;text-decoration:none;">9819091951</a>
+          </div>
+          <div class="info-item">
+            <img src="static/images/yahoo.png" alt="Yahoo" style="height:20px;width:20px;vertical-align:middle;margin-right:6px;">
+            <a href="mailto:a_dareakr@yahoo.com" style="color:inherit;text-decoration:none;">a_dareakr@yahoo.com</a>
+          </div>
+          <div class="info-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" style="height:20px;width:20px;vertical-align:middle;margin-right:6px;">
+            <a href="mailto:arundarekar128@gmail.com" style="color:inherit;text-decoration:none;">arundarekar128@gmail.com</a>
           </div>
           <div class="info-item">
             <i class="fas fa-clock"></i>
@@ -191,6 +233,35 @@
           </div>
           <button type="submit" class="submit-btn">Send Message via WhatsApp</button>
         </form>
+        <div id="paymentSection" style="display:none; max-width:400px; margin:2rem auto; background:#fff; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.08); padding:2rem; text-align:center;">
+          <h3>Complete Your Payment</h3>
+          <p>Please select a payment method to proceed:</p>
+          <div id="paymentOptions" style="display:flex; flex-direction:column; gap:1rem; margin:2rem 0;">
+            <button class="payment-btn" id="payCash" style="padding:1rem 1.5rem; border-radius:6px; border:none; background:#2ecc71; color:#fff; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start;"><img src="static/images/cash.png" alt="Cash" style="height:28px;width:28px;object-fit:contain;">Pay with Cash</button>
+            <button class="payment-btn" id="payCard" style="display:none; padding:1rem 1.5rem; border-radius:6px; border:none; background:#bdc3c7; color:#7f8c8d; font-size:1.1rem; cursor:not-allowed; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start; opacity:0.6;"><i class="fas fa-ban" style="height:28px;width:28px;display:flex;align-items:center;justify-content:center;color:#e74c3c;"></i>Pay with Card (Disabled)</button>
+            <button class="payment-btn" id="payUPI" style="display:none; padding:1rem 1.5rem; border-radius:6px; border:none; background:#bdc3c7; color:#7f8c8d; font-size:1.1rem; cursor:not-allowed; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start; opacity:0.6;"><i class="fas fa-ban" style="height:28px;width:28px;display:flex;align-items:center;justify-content:center;color:#e74c3c;"></i>Pay with UPI (Disabled)</button>
+            <img id="backFromPaymentOptions" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;" tabindex="0" />
+          </div>
+          <div id="cardSection" style="display:none; margin-top:2rem;">
+            <h4>Enter Card Details</h4>
+            <input type="text" id="cardNumber" placeholder="Card Number" style="width:100%;padding:0.7rem;margin:0.5rem 0;border-radius:5px;border:1px solid #ccc;">
+            <input type="text" id="cardExpiry" placeholder="MM/YY" style="width:48%;padding:0.7rem;margin:0.5rem 1% 0.5rem 0;border-radius:5px;border:1px solid #ccc;">
+            <input type="text" id="cardCVV" placeholder="CVV" style="width:48%;padding:0.7rem;margin:0.5rem 0 0.5rem 1%;border-radius:5px;border:1px solid #ccc;">
+            <button id="submitCard" style="margin-top:1rem;padding:0.8rem 2rem;border:none;border-radius:6px;background:#3498db;color:#fff;font-size:1rem;cursor:pointer;">Pay</button>
+            <img id="backFromCard" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;margin-left:1rem;" tabindex="0" />
+          </div>
+          <div id="upiSection" style="display:none; margin-top:2rem;">
+            <h4>Select UPI App</h4>
+            <div style="display:flex; gap:1.5rem; justify-content:center; margin:1rem 0;">
+              <button class="upi-btn" data-upi="PhonePe" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/phonepe.png" alt="PhonePe" style="height:48px;width:48px;object-fit:contain;"></button>
+              <button class="upi-btn" data-upi="GPay" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/gpay.png" alt="GPay" style="height:48px;width:48px;object-fit:contain;"></button>
+              <button class="upi-btn" data-upi="Paytm" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/paytm.png" alt="Paytm" style="height:48px;width:48px;object-fit:contain;"></button>
+            </div>
+            <img id="backFromUPI" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;" tabindex="0" />
+          </div>
+          <p style="font-size:0.95rem; color:#888;">You will receive payment instructions after selection.</p>
+        </div>
+        <div id="toast" style="display:none; position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#2ecc71; color:#fff; padding:1rem 2rem; border-radius:6px; font-size:1.1rem; z-index:9999; box-shadow:0 4px 16px rgba(0,0,0,0.15);">Successfully booked your appointment!</div>
       </div>
     </div>
   </section>
@@ -200,7 +271,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>About LegalPro</h3>
+          <h3>About LawOffice</h3>
           <p>We are dedicated to providing exceptional legal services with integrity and professionalism.</p>
         </div>
         <div class="footer-section">
@@ -215,14 +286,14 @@
         <div class="footer-section">
           <h3>Follow Us</h3>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 LegalPro. All rights reserved.</p>
+        <p>&copy; 2025 LawOffice. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -313,16 +384,16 @@
           body: JSON.stringify(messageData)
         });
 
-        if (response.ok) {
-          // Show success message
-          alert('Thank you! We will contact you shortly via WhatsApp.');
-          form.reset();
-        } else {
-          throw new Error('Failed to send message');
-        }
+        // Always show payment section regardless of response
+        form.style.display = 'none';
+        document.getElementById('paymentSection').style.display = 'block';
+        form.reset();
       } catch (error) {
+        // Log the error but do not show alert to user
         console.error('Error:', error);
-        alert('Sorry, there was an error sending your message. Please try again later.');
+        form.style.display = 'none';
+        document.getElementById('paymentSection').style.display = 'block';
+        form.reset();
       }
     });
 
@@ -341,6 +412,261 @@
         }
       }
       e.target.value = number;
+    });
+
+    // Payment logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const payCash = document.getElementById('payCash');
+      const payCard = document.getElementById('payCard');
+      const payUPI = document.getElementById('payUPI');
+      const cardSection = document.getElementById('cardSection');
+      const upiSection = document.getElementById('upiSection');
+      const paymentOptions = document.getElementById('paymentOptions');
+      const submitCard = document.getElementById('submitCard');
+      const backFromCard = document.getElementById('backFromCard');
+      const backFromUPI = document.getElementById('backFromUPI');
+      const backFromPaymentOptions = document.getElementById('backFromPaymentOptions');
+      const upiBtns = document.querySelectorAll('.upi-btn');
+      const toast = document.getElementById('toast');
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3500);
+      }
+      function goHomeWithToast() {
+        window.location.hash = '#home';
+        showToast('Successfully booked your appointment!');
+        // Optionally, reset payment UI
+        document.getElementById('paymentSection').style.display = 'none';
+        paymentOptions.style.display = 'flex';
+        cardSection.style.display = 'none';
+        upiSection.style.display = 'none';
+        // Show the contact form again after toast disappears
+        setTimeout(() => {
+          document.getElementById('contactForm').style.display = 'block';
+        }, 100);
+      }
+      if (payCash) payCash.onclick = goHomeWithToast;
+      // Disabled card payment functionality
+      // if (payCard) payCard.onclick = function() {
+      //   paymentOptions.style.display = 'none';
+      //   cardSection.style.display = 'block';
+      // };
+      // Disabled UPI payment functionality
+      // if (payUPI) payUPI.onclick = function() {
+      //   paymentOptions.style.display = 'none';
+      //   upiSection.style.display = 'block';
+      // };
+      if (submitCard) submitCard.onclick = function(e) {
+        e.preventDefault();
+        // You can add card validation here
+        goHomeWithToast();
+      };
+      if (backFromCard) backFromCard.onclick = function() {
+        cardSection.style.display = 'none';
+        paymentOptions.style.display = 'flex';
+      };
+      if (backFromUPI) backFromUPI.onclick = function() {
+        upiSection.style.display = 'none';
+        paymentOptions.style.display = 'flex';
+      };
+      if (backFromPaymentOptions) backFromPaymentOptions.onclick = function() {
+        document.getElementById('paymentSection').style.display = 'none';
+        document.getElementById('contactForm').style.display = 'block';
+      };
+      upiBtns.forEach(btn => {
+        btn.onclick = function() {
+          goHomeWithToast();
+        };
+      });
+    });
+
+    // Attorney Modal Functions
+    const attorneyData = {
+      nitin: {
+        name: "Nitin Sahadevan",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Nitin Sahadevan.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">A Mumbai based advocate and legal professional with post-qualification experience of over 30 years (Mumbai University, 1993) in diverse areas of law. A brief description of the areas covered are:</div>
+            <ul class="attorney-modal-list">
+              <li>Strategy, structuring, advice and support in business transactions for diverse industries such as manufacturing, research, information technology, real estate, supply chain and finance.</li>
+              <li>Negotiation, drafting and management of agreements, contracts and documents for high-value multi-jurisdictional transactions, contractual and negotiation such as mergers and acquisitions, sale and purchase of business assets, immovable property, routine business contracts, agreements and documents. Past experience in these areas includes transactions for companies based in the US, UK, Singapore and the Middle east in addition to India.</li>
+              <li>Litigation strategy, advice and support across various jurisdictions (including internationally), advice on strategy and road map for adopting best approaches for dispute resolution, recovery matters and litigation in civil and criminal matters.</li>
+              <li>Advice and guidance to corporates for developing legal policies and procedures by engaging with business stakeholders, external counsel, external business partners and advisors on various issues locally and internationally.</li>
+            </ul>
+          </div>
+        `
+      },
+      arjun: {
+        name: "Arjun Darekar",
+        position: "Principal Consultant",
+        specialty: "Legal Expert",
+        image: "static/images/Arjun Darekar.jpeg",
+        customHtml: `<div class='attorney-modal-section'><div class='attorney-modal-title'>Details coming soon.</div></div>`
+      },
+      pankaj: {
+        name: "Adv. Pankaj Ramashray Mishra",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Pankaj Mishra.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">Address</div>
+            <div class="attorney-modal-text">104, Prathamesh View CHS LTD, Eden Park, RBK Global School, Indralok Phase 6, Bhayander(East), Dist-Thane 401105</div>
+            <div class="attorney-modal-title">Education & Qualification</div>
+            <ul class="attorney-modal-list">
+              <li>BSc (Physics): (2006-09) National College (Mumbai University)</li>
+              <li>MSc (Physics): (2009-11) Mumbai University</li>
+              <li>B.Ed: (2013-14) R.R. Educational Trust (Mumbai University)</li>
+              <li>LLB: (2015-18) G.J. Advani Law college (Mumbai University)</li>
+            </ul>
+            <div class="attorney-modal-title">Bar Council</div>
+            <div class="attorney-modal-text">Enrolled in Bar Council of Maharashtra and Goa as an Advocate on 31-12-2019 (Reg. No. MAH/9710/2019)<br>Cleared Bar Council of India Exam in 2021 (Reg. No. 725629286)</div>
+            <div class="attorney-modal-title">Expertise</div>
+            <div class="attorney-modal-text">Civil Law, Testamentary, Probate, Will, Commercial Disputes, Co-operative Housing Society, Development & Redevelopment Agreement, Commercial Disputes.</div>
+          </div>
+        `
+      },
+      sangram: {
+        name: "Sangram Bapat",
+        position: "Consultant",
+        specialty: "Legal Expert",
+        image: "static/images/Sangram Bapat.jpeg",
+        customHtml: `<div class='attorney-modal-section'><div class='attorney-modal-title'>About</div><div class='attorney-modal-text'>I am handling all the Economic Offences related matters & Trials of Cheque Bouncing matters since last 15 years before the courts of Mumbai Metropolitan area.</div></div>`
+      },
+      razia: {
+        name: "RAZIA B. SHAIKH",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Razia B. Shaikh.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Hii<br>Me into legal field since last 25 years, specialized in Criminal matters, Family court matters, Domestic Violences matters as well as cheque bouncing cases u/s 138 NIA.<br><br>Motto to secure justice in favour of my clients, and provide proper guidance, legal advice and counsel clients which is my passion and dedication towards my work and to achieve best results for my clients.</div>
+          </div>
+        `
+      },
+      sarika: {
+        name: "Sarika Tripathi",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Sarika Tripathi.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">Practice Areas</div>
+            <ul class="attorney-modal-list">
+              <li>Civil: Recovery, private litigation suit, partition suit, adverse possession, Rent Act suit, leave and license related suit at competent Authority forum</li>
+              <li>Criminal: DV, MM court, session court, family, consumer court in all over Mumbai, Vasai, Thane, Kalyan, CBD Belapur</li>
+              <li>Registration: Trust Deed, Partnership Firm, Trade Mark, Patent, leave and license registration, Sale agreement, POA, Will, Gift Deed, Testamentary Petition</li>
+            </ul>
+          </div>
+        `
+      },
+      sharad: {
+        name: "Sharad Evalekar",
+        position: "Labour Law Consultant",
+        specialty: "Proprietor, Maxim Associates & Aadarsh Facilities Management Services",
+        image: "static/images/Sharad Evalekar.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">I am the proprietor of Maxim Associates and Aadarsh Facilities Management Services, with 30 years of experience in handling various aspects of Labour Law Consultancy. We specialize in:</div>
+            <ul class="attorney-modal-list">
+              <li>Provident Fund (PF) Matters</li>
+              <li>Employees' State Insurance Corporation (ESIC) Matters</li>
+              <li>Labour Laws & Compliance</li>
+              <li>Labour & Union Relations</li>
+              <li>Labour & Company Related Issues</li>
+              <li>Representation in Labour Commissioner Cases</li>
+            </ul>
+            <div class="attorney-modal-text">With a strong team of experienced professionals, we provide practical, compliant, and result-oriented solutions to businesses, ensuring smooth handling of statutory obligations and labour-related challenges.</div>
+          </div>
+        `
+      }
+    };
+
+    function openAttorneyModal(attorney) {
+      const modal = document.getElementById('attorneyModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      const attorneyInfo = attorneyData[attorney];
+
+      if (!attorneyInfo) return;
+
+      modalTitle.textContent = attorneyInfo.name + (attorneyInfo.position ? ` — ${attorneyInfo.position}` : '');
+      
+      modalContent.innerHTML = `
+        <div class="attorney-details">
+          <div class="attorney-image">
+            <img src="${attorneyInfo.image}" alt="${attorneyInfo.name}">
+          </div>
+          <div class="attorney-info">
+            <h3>${attorneyInfo.name}</h3>
+            <p class="position">${attorneyInfo.position}</p>
+          </div>
+          <div class="detail-section">
+            ${attorneyInfo.customHtml}
+          </div>
+        </div>
+      `;
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeAttorneyModal() {
+      const modal = document.getElementById('attorneyModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close modal when clicking outside
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('attorneyModal');
+      
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeAttorneyModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          closeAttorneyModal();
+        }
+      });
+    });
+
+    // Image Modal for Enlarged Attorney Photo
+    function openImageModal(imgSrc) {
+      var modal = document.getElementById('imageModal');
+      var modalImg = document.getElementById('modalLargeImage');
+      modalImg.src = imgSrc;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeImageModal() {
+      var modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    // Close image modal on click outside image
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageModal = document.getElementById('imageModal');
+      imageModal.addEventListener('click', function(e) {
+        if (e.target === imageModal) closeImageModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && imageModal.style.display === 'block') closeImageModal();
+      });
     });
   </script>
 </body>
