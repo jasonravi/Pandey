@@ -116,7 +116,7 @@ nav ul li a.cta-btn:hover {
 }
 
 .hero-content h2 {
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 6vw, 3.5rem);
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -358,6 +358,8 @@ nav ul li a.cta-btn:hover {
 .consultation-benefits {
   list-style: none;
   margin: 2rem 0;
+  display: block;
+  text-align: center;
 }
 
 .consultation-benefits li {
@@ -367,7 +369,8 @@ nav ul li a.cta-btn:hover {
 
 .consultation-benefits i {
   color: var(--secondary-color);
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
+  font-size: 1.4em;
 }
 
 /* Contact Section */
