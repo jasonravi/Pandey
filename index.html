@@ -20,24 +20,29 @@
       </button>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#practice-areas">Areas of Services and Expertise</a></li>
-          <li><a href="#attorneys">Our Consultants</a></li>
-          <li><a href="#consultation">Paid Consultation</a></li>
-          <li><a href="#contact" class="cta-btn">Contact Us</a></li>
+          <li><a href="#home" data-translate="nav.home">Home</a></li>
+          <li><a href="#practice-areas" data-translate="nav.services">Areas of Services and Expertise</a></li>
+          <li><a href="#attorneys" data-translate="nav.consultants">Our Consultants</a></li>
+          <li><a href="#consultation" data-translate="nav.consultation">Paid Consultation</a></li>
+          <li><a href="#contact" class="cta-btn" data-translate="nav.contact">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="mr">मराठी</button>
+        <button class="lang-btn" data-lang="hi">हिंदी</button>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h2>Legal and Compliance Excellence</h2>
-      <p>Experienced and Aggressive domain specialists for all your legal and compliance needs</p>
+      <h2 data-translate="hero.title">Legal and Compliance Excellence</h2>
+      <p data-translate="hero.description">Experienced and Aggressive domain specialists for all your legal and compliance needs</p>
       <div class="hero-buttons">
-        <a href="#consultation" class="primary-btn">Paid Consultation</a>
-        <a href="#practice-areas" class="secondary-btn">Learn More</a>
+        <a href="#consultation" class="primary-btn" data-translate="hero.consultation">Paid Consultation</a>
+        <a href="#practice-areas" class="secondary-btn" data-translate="hero.learnMore">Learn More</a>
       </div>
     </div>
   </section>
@@ -45,27 +50,27 @@
   <!-- Practice Areas -->
   <section id="practice-areas" class="practice-areas">
     <div class="container">
-      <h2>Services and Expertise</h2>
+      <h2 data-translate="services.title">Services and Expertise</h2>
       <div class="areas-grid">
         <div class="area-card">
           <i class="fas fa-building"></i>
-          <h3>Corporate Law</h3>
-          <p>Expert guidance in business formation, contracts, and corporate governance.</p>
+          <h3 data-translate="services.corporate.title">Corporate Law</h3>
+          <p data-translate="services.corporate.description">Expert guidance in business formation, contracts, and corporate governance.</p>
         </div>
         <div class="area-card">
           <i class="fas fa-gavel"></i>
-          <h3>Civil Litigation</h3>
-          <p>Strong representation in civil disputes and litigation matters.</p>
+          <h3 data-translate="services.civil.title">Civil Litigation</h3>
+          <p data-translate="services.civil.description">Strong representation in civil disputes and litigation matters.</p>
         </div>
         <div class="area-card">
           <i class="fas fa-home"></i>
-          <h3>Real Estate Law</h3>
-          <p>Comprehensive legal services for property transactions and disputes.</p>
+          <h3 data-translate="services.realestate.title">Real Estate Law</h3>
+          <p data-translate="services.realestate.description">Comprehensive legal services for property transactions and disputes.</p>
         </div>
         <div class="area-card">
           <i class="fas fa-users"></i>
-          <h3>Family Law</h3>
-          <p>Sensitive handling of divorce, custody, and family-related legal matters.</p>
+          <h3 data-translate="services.family.title">Family Law</h3>
+          <p data-translate="services.family.description">Sensitive handling of divorce, custody, and family-related legal matters.</p>
         </div>
       </div>
     </div>
@@ -74,14 +79,14 @@
   <!-- Attorneys Section -->
   <section id="attorneys" class="attorneys">
     <div class="container">
-      <h2>Our Expert Consultants</h2>
+      <h2 data-translate="consultants.title">Our Expert Consultants</h2>
       <div class="attorneys-grid">
         <div class="attorney-card">
           <img src="static/images/Arjun Darekar.jpeg" alt="Attorney Arun Darekar" class="attorney-photo" onclick="openImageModal('static/images/Arjun Darekar.jpeg')">
           <div class="content-wrapper">
             <h3>Arun Darekar</h3>
             <p class="position">Principal Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('arun')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('arun')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -89,7 +94,7 @@
           <div class="content-wrapper">
             <h3>Nitin Sahadevan</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('nitin')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('nitin')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -97,7 +102,7 @@
           <div class="content-wrapper">
             <h3>Pankaj Mishra</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('pankaj')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('pankaj')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -105,7 +110,7 @@
           <div class="content-wrapper">
             <h3>Sangram Bapat</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('sangram')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('sangram')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -113,7 +118,7 @@
           <div class="content-wrapper">
             <h3>Razia B. Shaikh</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('razia')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('razia')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -121,7 +126,7 @@
           <div class="content-wrapper">
             <h3>Sarika Tripathi</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('sarika')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('sarika')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
         <div class="attorney-card">
@@ -129,7 +134,7 @@
           <div class="content-wrapper">
             <h3>Sharad Evalekar</h3>
             <p class="position">Consultant</p>
-            <button class="know-more-btn" onclick="openAttorneyModal('sharad')">Know More</button>
+            <button class="know-more-btn" onclick="openAttorneyModal('sharad')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
       </div>
@@ -159,15 +164,15 @@
   <section id="consultation" class="consultation">
     <div class="container">
       <div class="consultation-content">
-        <h2>Get Your Paid Consultation</h2>
-        <p>Schedule a confidential consultation with our experienced professionals to discuss your legal needs.</p>
+        <h2 data-translate="consultation.title">Get Your Paid Consultation</h2>
+        <p data-translate="consultation.description">Schedule a confidential consultation with our experienced professionals to discuss your legal needs.</p>
         <ul class="consultation-benefits">
-          <li><i class="fas fa-check"></i> Professional consultation</li>
-          <li><i class="fas fa-check"></i> Experienced professionals</li>
-          <li><i class="fas fa-check"></i> Personalized legal strategy</li>
-          <li><i class="fas fa-check"></i> Flexible scheduling</li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit1">Professional consultation</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit2">Experienced professionals</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit3">Personalized legal strategy</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit4">Flexible scheduling</span></li>
         </ul>
-        <a href="#contact" class="primary-btn">Schedule Now</a>
+        <a href="#contact" class="primary-btn" data-translate="consultation.schedule">Schedule Now</a>
       </div>
     </div>
   </section>
@@ -175,10 +180,10 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact Us</h2>
+      <h2 data-translate="contact.title">Contact Us</h2>
       <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
+                  <div class="contact-info">
+            <h3 data-translate="contact.getInTouch">Get in Touch</h3>
           <div class="info-item">
             <i class="fas fa-map-marker-alt"></i>
             <p>Zaitoon Apartment, A wing, 607<br>Bandu Gore Marg, Jawahar Nagar,<br>Near Goregaon Station<br>Goregaon West, Mumbai,<br>Maharashtra 400062</p>
@@ -206,21 +211,21 @@
         </div>
         <form class="contact-form" id="contactForm">
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name" data-translate="form.name">Full Name</label>
             <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-translate="form.email">Email</label>
             <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone" data-translate="form.phone">Phone</label>
             <input type="tel" id="phone" name="phone" required>
           </div>
           <div class="form-group">
-            <label for="practice-area">Service Area</label>
+            <label for="practice-area" data-translate="form.serviceArea">Service Area</label>
             <select id="practice-area" name="practice-area" required>
-              <option value="">Select Service Area</option>
+              <option value="" data-translate="form.selectServiceArea">Select Service Area</option>
               <option value="criminal">Criminal Law</option>
               <option value="labour">Labour Law</option>
               <option value="registration">Registration all kinds</option>
@@ -231,10 +236,10 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Your Message</label>
+            <label for="message" data-translate="form.message">Your Message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <button type="submit" class="submit-btn">Send Message via WhatsApp</button>
+          <button type="submit" class="submit-btn" data-translate="form.submit">Send Message via WhatsApp</button>
         </form>
         <div id="paymentSection" style="display:none; max-width:400px; margin:2rem auto; background:#fff; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.08); padding:2rem; text-align:center;">
           <h3>Complete Your Payment</h3>
@@ -274,20 +279,20 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>About LawOffice</h3>
-          <p>We are dedicated to providing exceptional legal services with integrity and professionalism.</p>
+          <h3 data-translate="footer.about">About LawOffice</h3>
+          <p data-translate="footer.aboutDescription">We are dedicated to providing exceptional legal services with integrity and professionalism.</p>
         </div>
         <div class="footer-section">
-          <h3>Quick Links</h3>
+          <h3 data-translate="footer.quickLinks">Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#practice-areas">Areas of Services and Expertise</a></li>
-            <li><a href="#attorneys">Our Consultants</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-translate="footer.home">Home</a></li>
+            <li><a href="#practice-areas" data-translate="footer.services">Areas of Services and Expertise</a></li>
+            <li><a href="#attorneys" data-translate="footer.consultants">Our Consultants</a></li>
+            <li><a href="#contact" data-translate="footer.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h3>Follow Us</h3>
+          <h3 data-translate="footer.followUs">Follow Us</h3>
           <div class="social-links">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -644,6 +649,237 @@
       });
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && imageModal.style.display === 'block') closeImageModal();
+      });
+    });
+
+    // Translation System
+    const translations = {
+      en: {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.services': 'Areas of Services and Expertise',
+        'nav.consultants': 'Our Consultants',
+        'nav.consultation': 'Paid Consultation',
+        'nav.contact': 'Contact Us',
+        
+        // Hero Section
+        'hero.title': 'Legal and Compliance Excellence',
+        'hero.description': 'Experienced and Aggressive domain specialists for all your legal and compliance needs',
+        'hero.consultation': 'Paid Consultation',
+        'hero.learnMore': 'Learn More',
+        
+        // Services Section
+        'services.title': 'Services and Expertise',
+        'services.corporate.title': 'Corporate Law',
+        'services.corporate.description': 'Expert guidance in business formation, contracts, and corporate governance.',
+        'services.civil.title': 'Civil Litigation',
+        'services.civil.description': 'Strong representation in civil disputes and litigation matters.',
+        'services.realestate.title': 'Real Estate Law',
+        'services.realestate.description': 'Comprehensive legal services for property transactions and disputes.',
+        'services.family.title': 'Family Law',
+        'services.family.description': 'Sensitive handling of divorce, custody, and family-related legal matters.',
+        
+        // Consultants Section
+        'consultants.title': 'Our Expert Consultants',
+        'consultants.knowMore': 'Know More',
+        
+        // Consultation Section
+        'consultation.title': 'Get Your Paid Consultation',
+        'consultation.description': 'Schedule a confidential consultation with our experienced professionals to discuss your legal needs.',
+        'consultation.benefit1': 'Professional consultation',
+        'consultation.benefit2': 'Experienced professionals',
+        'consultation.benefit3': 'Personalized legal strategy',
+        'consultation.benefit4': 'Flexible scheduling',
+        'consultation.schedule': 'Schedule Now',
+        
+        // Contact Section
+        'contact.title': 'Contact Us',
+        'contact.getInTouch': 'Get in Touch',
+        
+        // Form
+        'form.name': 'Full Name',
+        'form.email': 'Email',
+        'form.phone': 'Phone',
+        'form.serviceArea': 'Service Area',
+        'form.selectServiceArea': 'Select Service Area',
+        'form.message': 'Your Message',
+        'form.submit': 'Send Message via WhatsApp',
+        
+        // Footer
+        'footer.about': 'About LawOffice',
+        'footer.aboutDescription': 'We are dedicated to providing exceptional legal services with integrity and professionalism.',
+        'footer.quickLinks': 'Quick Links',
+        'footer.home': 'Home',
+        'footer.services': 'Areas of Services and Expertise',
+        'footer.consultants': 'Our Consultants',
+        'footer.contact': 'Contact',
+        'footer.followUs': 'Follow Us'
+      },
+      mr: {
+        // Navigation
+        'nav.home': 'मुख्यपृष्ठ',
+        'nav.services': 'सेवा आणि विशेषज्ञता क्षेत्रे',
+        'nav.consultants': 'आमचे विशेषज्ञ सल्लागार',
+        'nav.consultation': 'पैसे देऊन सल्ला',
+        'nav.contact': 'संपर्क साधा',
+        
+        // Hero Section
+        'hero.title': 'कायदेशीर आणि अनुपालन उत्कृष्टता',
+        'hero.description': 'तुमच्या सर्व कायदेशीर आणि अनुपालन गरजांसाठी अनुभवी आणि आक्रमक डोमेन विशेषज्ञ',
+        'hero.consultation': 'पैसे देऊन सल्ला',
+        'hero.learnMore': 'अधिक जाणून घ्या',
+        
+        // Services Section
+        'services.title': 'सेवा आणि विशेषज्ञता',
+        'services.corporate.title': 'कॉर्पोरेट कायदा',
+        'services.corporate.description': 'व्यवसाय निर्मिती, करार आणि कॉर्पोरेट शासनातील विशेषज्ञ मार्गदर्शन.',
+        'services.civil.title': 'दिवाणी खटला',
+        'services.civil.description': 'दिवाणी विवाद आणि खटल्यांमध्ये मजबूत प्रतिनिधित्व.',
+        'services.realestate.title': 'जमीन मालमत्ता कायदा',
+        'services.realestate.description': 'मालमत्ता व्यवहार आणि विवादांसाठी व्यापक कायदेशीर सेवा.',
+        'services.family.title': 'कौटुंबिक कायदा',
+        'services.family.description': 'घटस्फोट, पालकत्व आणि कौटुंबिक कायदेशीर बाबींचे संवेदनशील व्यवस्थापन.',
+        
+        // Consultants Section
+        'consultants.title': 'आमचे विशेषज्ञ सल्लागार',
+        'consultants.knowMore': 'अधिक जाणून घ्या',
+        
+        // Consultation Section
+        'consultation.title': 'तुमचा पैसे देऊन सल्ला मिळवा',
+        'consultation.description': 'तुमच्या कायदेशीर गरजांवर चर्चा करण्यासाठी आमच्या अनुभवी व्यावसायिकांसोबत गोपनीय सल्ला नियोजित करा.',
+        'consultation.benefit1': 'व्यावसायिक सल्ला',
+        'consultation.benefit2': 'अनुभवी व्यावसायिक',
+        'consultation.benefit3': 'वैयक्तिकृत कायदेशीर धोरण',
+        'consultation.benefit4': 'लवचिक वेळापत्रक',
+        'consultation.schedule': 'आता नियोजित करा',
+        
+        // Contact Section
+        'contact.title': 'संपर्क साधा',
+        'contact.getInTouch': 'संपर्क साधा',
+        
+        // Form
+        'form.name': 'पूर्ण नाव',
+        'form.email': 'ईमेल',
+        'form.phone': 'फोन',
+        'form.serviceArea': 'सेवा क्षेत्र',
+        'form.selectServiceArea': 'सेवा क्षेत्र निवडा',
+        'form.message': 'तुमचा संदेश',
+        'form.submit': 'WhatsApp द्वारे संदेश पाठवा',
+        
+        // Footer
+        'footer.about': 'LawOffice बद्दल',
+        'footer.aboutDescription': 'आम्ही सचोटी आणि व्यावसायिकतेसह उत्कृष्ट कायदेशीर सेवा प्रदान करण्यासाठी समर्पित आहोत.',
+        'footer.quickLinks': 'त्वरित दुवे',
+        'footer.home': 'मुख्यपृष्ठ',
+        'footer.services': 'सेवा आणि विशेषज्ञता क्षेत्रे',
+        'footer.consultants': 'आमचे सल्लागार',
+        'footer.contact': 'संपर्क',
+        'footer.followUs': 'आम्हाला फॉलो करा'
+      },
+      hi: {
+        // Navigation
+        'nav.home': 'होम',
+        'nav.services': 'सेवाएं और विशेषज्ञता क्षेत्र',
+        'nav.consultants': 'हमारे विशेषज्ञ सलाहकार',
+        'nav.consultation': 'भुगतान परामर्श',
+        'nav.contact': 'संपर्क करें',
+        
+        // Hero Section
+        'hero.title': 'कानूनी और अनुपालन उत्कृष्टता',
+        'hero.description': 'आपकी सभी कानूनी और अनुपालन आवश्यकताओं के लिए अनुभवी और आक्रामक डोमेन विशेषज्ञ',
+        'hero.consultation': 'भुगतान परामर्श',
+        'hero.learnMore': 'और जानें',
+        
+        // Services Section
+        'services.title': 'सेवाएं और विशेषज्ञता',
+        'services.corporate.title': 'कॉर्पोरेट कानून',
+        'services.corporate.description': 'व्यवसाय निर्माण, अनुबंध और कॉर्पोरेट शासन में विशेषज्ञ मार्गदर्शन।',
+        'services.civil.title': 'दीवानी मुकदमेबाजी',
+        'services.civil.description': 'दीवानी विवादों और मुकदमेबाजी मामलों में मजबूत प्रतिनिधित्व।',
+        'services.realestate.title': 'रियल एस्टेट कानून',
+        'services.realestate.description': 'संपत्ति लेन-देन और विवादों के लिए व्यापक कानूनी सेवाएं।',
+        'services.family.title': 'पारिवारिक कानून',
+        'services.family.description': 'तलाक, संरक्षण और पारिवारिक कानूनी मामलों का संवेदनशील प्रबंधन।',
+        
+        // Consultants Section
+        'consultants.title': 'हमारे विशेषज्ञ सलाहकार',
+        'consultants.knowMore': 'और जानें',
+        
+        // Consultation Section
+        'consultation.title': 'अपना भुगतान परामर्श प्राप्त करें',
+        'consultation.description': 'अपनी कानूनी आवश्यकताओं पर चर्चा करने के लिए हमारे अनुभवी पेशेवरों के साथ गोपनीय परामर्श शेड्यूल करें।',
+        'consultation.benefit1': 'पेशेवर परामर्श',
+        'consultation.benefit2': 'अनुभवी पेशेवर',
+        'consultation.benefit3': 'व्यक्तिगत कानूनी रणनीति',
+        'consultation.benefit4': 'लचीला शेड्यूलिंग',
+        'consultation.schedule': 'अभी शेड्यूल करें',
+        
+        // Contact Section
+        'contact.title': 'संपर्क करें',
+        'contact.getInTouch': 'संपर्क करें',
+        
+        // Form
+        'form.name': 'पूरा नाम',
+        'form.email': 'ईमेल',
+        'form.phone': 'फोन',
+        'form.serviceArea': 'सेवा क्षेत्र',
+        'form.selectServiceArea': 'सेवा क्षेत्र चुनें',
+        'form.message': 'आपका संदेश',
+        'form.submit': 'WhatsApp के माध्यम से संदेश भेजें',
+        
+        // Footer
+        'footer.about': 'LawOffice के बारे में',
+        'footer.aboutDescription': 'हम ईमानदारी और पेशेवरता के साथ उत्कृष्ट कानूनी सेवाएं प्रदान करने के लिए समर्पित हैं।',
+        'footer.quickLinks': 'त्वरित लिंक',
+        'footer.home': 'होम',
+        'footer.services': 'सेवाएं और विशेषज्ञता क्षेत्र',
+        'footer.consultants': 'हमारे सलाहकार',
+        'footer.contact': 'संपर्क',
+        'footer.followUs': 'हमें फॉलो करें'
+      }
+    };
+
+    let currentLanguage = 'en';
+
+    function translatePage(lang) {
+      if (lang === currentLanguage) return;
+      
+      currentLanguage = lang;
+      
+      // Update language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Add loading state
+      document.body.classList.add('translating');
+
+      // Translate all elements with data-translate attribute
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+
+      // Remove loading state
+      setTimeout(() => {
+        document.body.classList.remove('translating');
+      }, 300);
+    }
+
+    // Initialize language switcher
+    document.addEventListener('DOMContentLoaded', function() {
+      const langButtons = document.querySelectorAll('.lang-btn');
+      
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.dataset.lang;
+          translatePage(lang);
+        });
       });
     });
   </script>
