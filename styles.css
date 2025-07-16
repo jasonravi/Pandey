@@ -229,6 +229,41 @@ nav ul li a.cta-btn:hover {
   margin-bottom: 3rem;
   font-size: 2.5rem;
   font-weight: 700;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+
+.attorneys h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
+  border-radius: 2px;
+  animation: expandWidth 1.5s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80px;
+  }
 }
 
 .attorneys-slider {
@@ -240,41 +275,169 @@ nav ul li a.cta-btn:hover {
 }
 
 .attorneys-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
   padding: 2rem 0;
-  justify-items: center;
+  position: relative;
 }
 
 .attorney-card {
-  max-width: 420px;
-  min-width: 320px;
+  max-width: 380px;
+  min-width: 280px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 2rem 2rem;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
-  background: var(--white);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(44,62,80,0.15);
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.attorney-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(231,76,60,0.1), 
+    transparent);
+  transition: left 0.6s ease;
+}
+
+.attorney-card:hover::before {
+  left: 100%;
+}
+
+.attorney-card:nth-child(odd) {
+  animation: cardFloatOdd 6s ease-in-out infinite 1s;
+}
+
+.attorney-card:nth-child(even) {
+  animation: cardFloatEven 6s ease-in-out infinite reverse 1s;
+}
+
+@keyframes cardFloatOdd {
+  0%, 100% { transform: translateY(5px) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0.5deg); }
+}
+
+@keyframes cardFloatEven {
+  0%, 100% { transform: translateY(-5px) rotate(0deg); }
+  50% { transform: translateY(5px) rotate(-0.5deg); }
 }
 
 .attorney-card:hover {
-  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
-  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(44,62,80,0.25);
+  transform: translateY(-15px) scale(1.05) rotate(2deg);
+  background: linear-gradient(145deg, #ffffff, #f0f2f5);
+}
+
+.attorney-card:nth-child(3n+1) {
+  border-left: 4px solid #e74c3c;
+}
+
+.attorney-card:nth-child(3n+2) {
+  border-left: 4px solid #3498db;
+}
+
+.attorney-card:nth-child(3n+3) {
+  border-left: 4px solid #2ecc71;
+}
+
+/* Simplified entrance animations */
+.attorney-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: cardEnter 1s ease-out;
+}
+
+.attorney-card:nth-child(1) { animation-delay: 0.1s; }
+.attorney-card:nth-child(2) { animation-delay: 0.2s; }
+.attorney-card:nth-child(3) { animation-delay: 0.3s; }
+.attorney-card:nth-child(4) { animation-delay: 0.4s; }
+.attorney-card:nth-child(5) { animation-delay: 0.5s; }
+.attorney-card:nth-child(6) { animation-delay: 0.6s; }
+.attorney-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes cardEnter {
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .attorney-card,
+  .attorney-card:nth-child(odd),
+  .attorney-card:nth-child(even),
+  .attorneys h2 {
+    animation: none !important;
+  }
+  
+  .attorney-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .attorney-card .attorney-photo {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--secondary-color);
+  border: 4px solid var(--secondary-color);
   margin-bottom: 1.5rem;
   background: #f5f6fa;
-  box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+  box-shadow: 0 8px 25px rgba(44,62,80,0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  z-index: 2;
+}
+
+.attorney-card:hover .attorney-photo {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 40px rgba(44,62,80,0.3);
+  border-width: 5px;
+}
+
+.attorney-card .attorney-photo::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #e74c3c, #3498db, #2ecc71, #f39c12, #e74c3c);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.attorney-card:hover .attorney-photo::before {
+  opacity: 0.7;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .content-wrapper h3 {
@@ -282,12 +445,29 @@ nav ul li a.cta-btn:hover {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.attorney-card:hover .content-wrapper h3 {
+  transform: translateY(-5px);
+  color: #1a252f;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .content-wrapper .position {
   color: var(--secondary-color);
   font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.attorney-card:hover .content-wrapper .position {
+  transform: translateY(-3px);
   font-weight: 600;
+}
+
+.content-wrapper {
   margin-bottom: 0.7rem;
 }
 
@@ -300,7 +480,6 @@ nav ul li a.cta-btn:hover {
 
 @media (max-width: 900px) {
   .attorneys-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
   .attorney-card {
@@ -322,7 +501,6 @@ nav ul li a.cta-btn:hover {
 
 @media (max-width: 600px) {
   .attorneys-grid {
-    grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
   }
   .attorney-card {
@@ -634,7 +812,6 @@ footer {
   }
 
   .attorneys-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     padding: 0 1rem;
   }
@@ -799,7 +976,7 @@ footer {
   }
 
   .attorneys-grid {
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
   }
 }
 
@@ -823,10 +1000,13 @@ footer {
 
 /* Know More Button Styles */
 .know-more-btn {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, var(--secondary-color), #d32f2f);
   color: var(--white);
   border: none;
   padding: 0.8rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
@@ -836,10 +1016,31 @@ footer {
   font-size: 0.95rem;
 }
 
+.know-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.know-more-btn:hover::before {
+  left: 100%;
+}
+
 .know-more-btn:hover {
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(231,76,60,0.4);
+}
+
+.attorney-card:hover .know-more-btn {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 15px rgba(231,76,60,0.3);
 }
 
 /* Modal Styles */
