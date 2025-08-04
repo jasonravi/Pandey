@@ -137,6 +137,14 @@
             <button class="know-more-btn" onclick="openAttorneyModal('sharad')" data-translate="consultants.knowMore">Know More</button>
           </div>
         </div>
+        <div class="attorney-card">
+          <img src="static/images/madhukar.jpeg" alt="Madhukar" class="attorney-photo" onclick="openImageModal('static/images/madhukar.jpeg')">
+          <div class="content-wrapper">
+            <h3>Madhukar</h3>
+            <p class="position">Coordinator</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('madhukar')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -627,6 +635,41 @@
           <div class="attorney-modal-section">
             <div class="attorney-modal-title">About</div>
             <div class="attorney-modal-text">Sharad Evalekar is a lawyer qualified from Mumbai University in the year 1993 and is the proprietor of Maxim Associates and Aadarsh Facilities Management Services. He specialises in the area of labour law and has for the past 30 years been handling various aspects of labour law such as matters pertaining to Employer's Provident Fund, Employees' State Insurance Corporation, Labour Laws compliances, labour and union relations, corporate labour issues and representation in Labour Commissioner cases. He heads a strong team of experienced professionals, who provide practical, compliant, and result-oriented solutions to businesses, ensuring smooth handling of statutory obligations and labour-related challenges.</div>
+          </div>
+        `
+      },
+      madhukar: {
+        name: "Madhukar",
+        position: "Coordinator",
+        specialty: "Client Relations & Administrative Coordination",
+        image: "static/images/madhukar.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Madhukar serves as the Coordinator at LawOffice, ensuring seamless communication between clients and our expert legal team. With excellent organizational skills and attention to detail, Madhukar manages client relationships, schedules consultations, and coordinates legal proceedings. His dedication to client service excellence ensures that every client receives prompt attention and proper guidance throughout their legal journey.</div>
+          </div>
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title" style="color: #2c3e50; font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid #3498db;">🎯 Key Responsibilities</div>
+            
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #3498db;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📞 Client Communication</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Managing client inquiries, scheduling appointments, and ensuring smooth communication flow.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📅 Consultation Scheduling</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Coordinating paid consultations and managing appointment calendars for all consultants.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #9b59b6;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📋 Administrative Support</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Handling documentation, follow-ups, and ensuring all administrative processes run efficiently.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f39c12;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">🤝 Client Relations</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Building and maintaining strong relationships with clients, ensuring satisfaction and trust.</div>
+            </div>
           </div>
         `
       }
