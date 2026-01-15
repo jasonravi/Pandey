@@ -1,55 +1,987 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Site Temporarily Unavailable</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            max-width: 500px;
-            width: 90%;
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        p {
-            font-size: 16px;
-            margin: 10px 0;
-            color: #555;
-        }
-        .status {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LawOffice - Professional Legal Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
+  <header>
     <div class="container">
-        <h1>🚧 Site Temporarily Unavailable</h1>
-        <p>We’re currently performing maintenance or experiencing an unexpected issue.</p>
-        <p>Please check back again shortly.</p>
-        <div class="status">
-            Thank you for your patience.
-        </div>
+      <div class="logo">
+        <i class="fas fa-balance-scale"></i>
+        <h1>LawOffice</h1>
+      </div>
+      <button class="mobile-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#home" data-translate="nav.home">Home</a></li>
+          <li><a href="#practice-areas" data-translate="nav.services">Areas of Services and Expertise</a></li>
+          <li><a href="#attorneys" data-translate="nav.consultants">Our Consultants</a></li>
+          <li><a href="#consultation" data-translate="nav.consultation">Paid Consultation</a></li>
+          <li><a href="#contact" class="cta-btn" data-translate="nav.contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="mr">मराठी</button>
+        <button class="lang-btn" data-lang="hi">हिंदी</button>
+      </div>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 data-translate="hero.title">Legal and Compliance Excellence</h2>
+      <p data-translate="hero.description">Experienced and Aggressive domain specialists for all your legal and compliance needs</p>
+      <div class="hero-buttons">
+        <a href="#consultation" class="primary-btn" data-translate="hero.consultation">Paid Consultation</a>
+        <a href="#practice-areas" class="secondary-btn" data-translate="hero.learnMore">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section id="practice-areas" class="practice-areas">
+    <div class="container">
+      <h2 data-translate="services.title">Services and Expertise</h2>
+      <div class="areas-grid">
+        <div class="area-card">
+          <i class="fas fa-building"></i>
+          <h3 data-translate="services.corporate.title">Corporate Law</h3>
+          <p data-translate="services.corporate.description">Expert guidance in business formation, contracts, and corporate governance.</p>
+        </div>
+        <div class="area-card">
+          <i class="fas fa-gavel"></i>
+          <h3 data-translate="services.civil.title">Civil Litigation</h3>
+          <p data-translate="services.civil.description">Strong representation in civil disputes and litigation matters.</p>
+        </div>
+        <div class="area-card">
+          <i class="fas fa-home"></i>
+          <h3 data-translate="services.realestate.title">Real Estate Law</h3>
+          <p data-translate="services.realestate.description">Comprehensive legal services for property transactions and disputes.</p>
+        </div>
+        <div class="area-card">
+          <i class="fas fa-users"></i>
+          <h3 data-translate="services.family.title">Family Law</h3>
+          <p data-translate="services.family.description">Sensitive handling of divorce, custody, and family-related legal matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attorneys Section -->
+  <section id="attorneys" class="attorneys">
+    <div class="container">
+      <h2 data-translate="consultants.title">Our Expert Consultants</h2>
+      <div class="attorneys-grid">
+        <div class="attorney-card">
+          <img src="static/images/Arjun Darekar.jpeg" alt="Attorney Arun Darekar" class="attorney-photo" onclick="openImageModal('static/images/Arjun Darekar.jpeg')">
+          <div class="content-wrapper">
+            <h3>Arun Darekar</h3>
+            <p class="position">Principal Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('arun')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Nitin Sahadevan.jpeg" alt="Attorney Nitin Sahadevan" class="attorney-photo" onclick="openImageModal('static/images/Nitin Sahadevan.jpeg')">
+          <div class="content-wrapper">
+            <h3>Nitin Sahadevan</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('nitin')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Pankaj Mishra.jpeg" alt="Attorney Pankaj Mishra" class="attorney-photo" onclick="openImageModal('static/images/Pankaj Mishra.jpeg')">
+          <div class="content-wrapper">
+            <h3>Pankaj Mishra</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('pankaj')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sangram Bapat.jpeg" alt="Attorney Sangram Bapat" class="attorney-photo" onclick="openImageModal('static/images/Sangram Bapat.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sangram Bapat</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sangram')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Razia B. Shaikh.jpeg" alt="Attorney Razia B. Shaikh" class="attorney-photo" onclick="openImageModal('static/images/Razia B. Shaikh.jpeg')">
+          <div class="content-wrapper">
+            <h3>Razia B. Shaikh</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('razia')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sarika Tripathi.jpeg" alt="Attorney Sarika Tripathi" class="attorney-photo" onclick="openImageModal('static/images/Sarika Tripathi.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sarika Tripathi</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sarika')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/Sharad Evalekar.jpeg" alt="Attorney Sharad Evalekar" class="attorney-photo" onclick="openImageModal('static/images/Sharad Evalekar.jpeg')">
+          <div class="content-wrapper">
+            <h3>Sharad Evalekar</h3>
+            <p class="position">Consultant</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('sharad')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+        <div class="attorney-card">
+          <img src="static/images/madhukar.jpeg" alt="Madhukar" class="attorney-photo" onclick="openImageModal('static/images/madhukar.jpeg')">
+          <div class="content-wrapper">
+            <h3>Madhukar</h3>
+            <p class="position">Coordinator</p>
+            <button class="know-more-btn" onclick="openAttorneyModal('madhukar')" data-translate="consultants.knowMore">Know More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attorney Modal -->
+  <div id="attorneyModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="modal-content" style="background-color: #fff; margin: 5% auto; padding: 0; border-radius: 10px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+      <div class="modal-header" style="padding: 1.5rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+        <h2 id="modalTitle" style="margin: 0; color: #2c3e50;"></h2>
+        <span class="close" onclick="closeAttorneyModal()" style="color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+      </div>
+      <div class="modal-body" style="padding: 1.5rem;">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Modal for Enlarged Attorney Photo -->
+  <div id="imageModal" class="modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7);">
+    <span class="close" onclick="closeImageModal()" style="position:absolute;top:30px;right:40px;color:#fff;font-size:40px;font-weight:bold;cursor:pointer;z-index:2100;">&times;</span>
+    <img id="modalLargeImage" src="" alt="Attorney Large" style="display:block;max-width:90vw;max-height:80vh;margin:60px auto 0 auto;border-radius:18px;box-shadow:0 8px 32px rgba(44,62,80,0.25);background:#fff;">
+  </div>
+
+  <!-- Free Consultation Section -->
+  <section id="consultation" class="consultation">
+    <div class="container">
+      <div class="consultation-content">
+        <h2 data-translate="consultation.title">Get Your Paid Consultation</h2>
+        <p data-translate="consultation.description">Schedule a confidential consultation with our experienced professionals to discuss your legal needs.</p>
+        <ul class="consultation-benefits">
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit1">Professional consultation</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit2">Experienced professionals</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit3">Personalized legal strategy</span></li>
+          <li><i class="fas fa-check"></i> <span data-translate="consultation.benefit4">Flexible scheduling</span></li>
+        </ul>
+        <a href="#contact" class="primary-btn" data-translate="consultation.schedule">Schedule Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-translate="contact.title">Contact Us</h2>
+      <div class="contact-grid">
+                  <div class="contact-info">
+            <h3 data-translate="contact.getInTouch">Get in Touch</h3>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Zaitoon Apartment, A wing, 607<br>Bandu Gore Marg, Jawahar Nagar,<br>Near Goregaon Station<br>Goregaon West, Mumbai,<br>Maharashtra 400062</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:9326066607" style="color:inherit;text-decoration:none;">9326066607</a>
+          </div>
+          <div class="info-item">
+            <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+            <a href="https://wa.me/919819091951" target="_blank" style="color:inherit;text-decoration:none;">9819091951</a>
+          </div>
+          <div class="info-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" style="height:20px;width:20px;vertical-align:middle;margin-right:6px;">
+            <a href="mailto:arun@lawoffices.in" style="color:inherit;text-decoration:none;">arun@lawoffices.in</a>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" data-translate="form.name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-translate="form.email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-translate="form.phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="practice-area" data-translate="form.serviceArea">Service Area</label>
+            <select id="practice-area" name="practice-area" required>
+              <option value="" data-translate="form.selectServiceArea">Select Service Area</option>
+              <option value="criminal">Criminal Law</option>
+              <option value="labour">Labour Law</option>
+              <option value="registration">Registration all kinds</option>
+              <option value="corporate">Corporate Law</option>
+              <option value="civil">Civil Litigation</option>
+              <option value="real-estate">Real Estate Law</option>
+              <option value="family">Family Law</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" data-translate="form.message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn" data-translate="form.submit">Send Message via WhatsApp</button>
+        </form>
+        <div id="paymentSection" style="display:none; max-width:400px; margin:2rem auto; background:#fff; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.08); padding:2rem; text-align:center;">
+          <h3>Complete Your Payment</h3>
+          <p>Please select a payment method to proceed:</p>
+          <div id="paymentOptions" style="display:flex; flex-direction:column; gap:1rem; margin:2rem 0;">
+            <button class="payment-btn" id="payCash" style="padding:1rem 1.5rem; border-radius:6px; border:none; background:#2ecc71; color:#fff; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start;"><img src="static/images/cash.png" alt="Cash" style="height:28px;width:28px;object-fit:contain;">Pay with Cash</button>
+            <button class="payment-btn" id="payCard" style="display:none; padding:1rem 1.5rem; border-radius:6px; border:none; background:#bdc3c7; color:#7f8c8d; font-size:1.1rem; cursor:not-allowed; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start; opacity:0.6;"><i class="fas fa-ban" style="height:28px;width:28px;display:flex;align-items:center;justify-content:center;color:#e74c3c;"></i>Pay with Card (Disabled)</button>
+            <button class="payment-btn" id="payUPI" style="display:none; padding:1rem 1.5rem; border-radius:6px; border:none; background:#bdc3c7; color:#7f8c8d; font-size:1.1rem; cursor:not-allowed; display:flex; align-items:center; gap:0.7rem; justify-content:flex-start; opacity:0.6;"><i class="fas fa-ban" style="height:28px;width:28px;display:flex;align-items:center;justify-content:center;color:#e74c3c;"></i>Pay with UPI (Disabled)</button>
+            <img id="backFromPaymentOptions" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;" tabindex="0" />
+          </div>
+          <div id="cardSection" style="display:none; margin-top:2rem;">
+            <h4>Enter Card Details</h4>
+            <input type="text" id="cardNumber" placeholder="Card Number" style="width:100%;padding:0.7rem;margin:0.5rem 0;border-radius:5px;border:1px solid #ccc;">
+            <input type="text" id="cardExpiry" placeholder="MM/YY" style="width:48%;padding:0.7rem;margin:0.5rem 1% 0.5rem 0;border-radius:5px;border:1px solid #ccc;">
+            <input type="text" id="cardCVV" placeholder="CVV" style="width:48%;padding:0.7rem;margin:0.5rem 0 0.5rem 1%;border-radius:5px;border:1px solid #ccc;">
+            <button id="submitCard" style="margin-top:1rem;padding:0.8rem 2rem;border:none;border-radius:6px;background:#3498db;color:#fff;font-size:1rem;cursor:pointer;">Pay</button>
+            <img id="backFromCard" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;margin-left:1rem;" tabindex="0" />
+          </div>
+          <div id="upiSection" style="display:none; margin-top:2rem;">
+            <h4>Select UPI App</h4>
+            <div style="display:flex; gap:1.5rem; justify-content:center; margin:1rem 0;">
+              <button class="upi-btn" data-upi="PhonePe" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/phonepe.png" alt="PhonePe" style="height:48px;width:48px;object-fit:contain;"></button>
+              <button class="upi-btn" data-upi="GPay" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/gpay.png" alt="GPay" style="height:48px;width:48px;object-fit:contain;"></button>
+              <button class="upi-btn" data-upi="Paytm" style="padding:0.7rem 1.5rem; border:none; border-radius:12px; background:#fff; cursor:pointer; display:flex; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="static/images/paytm.png" alt="Paytm" style="height:48px;width:48px;object-fit:contain;"></button>
+            </div>
+            <img id="backFromUPI" src="static/images/back.png" alt="Back" style="height:44px;width:44px;object-fit:contain;cursor:pointer;margin-top:1rem;" tabindex="0" />
+          </div>
+          <p style="font-size:0.95rem; color:#888;">You will receive payment instructions after selection.</p>
+        </div>
+        <div id="toast" style="display:none; position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#2ecc71; color:#fff; padding:1rem 2rem; border-radius:6px; font-size:1.1rem; z-index:9999; box-shadow:0 4px 16px rgba(0,0,0,0.15);">Successfully booked your appointment!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 data-translate="footer.about">About LawOffice</h3>
+          <p data-translate="footer.aboutDescription">We are dedicated to providing exceptional legal services with integrity and professionalism.</p>
+        </div>
+        <div class="footer-section">
+          <h3 data-translate="footer.quickLinks">Quick Links</h3>
+          <ul>
+            <li><a href="#home" data-translate="footer.home">Home</a></li>
+            <li><a href="#practice-areas" data-translate="footer.services">Areas of Services and Expertise</a></li>
+            <li><a href="#attorneys" data-translate="footer.consultants">Our Consultants</a></li>
+            <li><a href="#contact" data-translate="footer.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 data-translate="footer.followUs">Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LawOffice. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add before closing body tag -->
+  <script>
+    // Mobile Navigation Toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav a');
+
+    mobileNavToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      const isOpen = nav.classList.contains('active');
+      mobileNavToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile nav when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Form handling with WhatsApp Business API
+    const form = document.querySelector('#contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const practiceArea = document.getElementById('practice-area').value;
+      const message = document.getElementById('message').value;
+
+      // Format the phone number
+      let formattedPhone = phone.replace(/[\s-\(\)]/g, '');
+      if (!formattedPhone.startsWith('91')) {
+        formattedPhone = '91' + formattedPhone;
+      }
+
+      try {
+        // Replace these with your actual WhatsApp Business API credentials
+        const WHATSAPP_TOKEN = 'YOUR_WHATSAPP_TOKEN';
+        const PHONE_NUMBER_ID = 'YOUR_PHONE_NUMBER_ID';
+        
+        // Message template
+        const messageData = {
+          messaging_product: "whatsapp",
+          to: formattedPhone,
+          type: "template",
+          template: {
+            name: "legal_inquiry_confirmation",
+            language: {
+              code: "en"
+            },
+            components: [
+              {
+                type: "body",
+                parameters: [
+                  {
+                    type: "text",
+                    text: name
+                  },
+                  {
+                    type: "text",
+                    text: practiceArea
+                  },
+                  {
+                    type: "text",
+                    text: message
+                  }
+                ]
+              }
+            ]
+          }
+        };
+
+        // Send message using WhatsApp Business API
+        const response = await fetch(`https://graph.facebook.com/v17.0/${PHONE_NUMBER_ID}/messages`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${WHATSAPP_TOKEN}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(messageData)
+        });
+
+        // Always show payment section regardless of response
+        form.style.display = 'none';
+        document.getElementById('paymentSection').style.display = 'block';
+        form.reset();
+      } catch (error) {
+        // Log the error but do not show alert to user
+        console.error('Error:', error);
+        form.style.display = 'none';
+        document.getElementById('paymentSection').style.display = 'block';
+        form.reset();
+      }
+    });
+
+    // Phone number validation
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', (e) => {
+      let number = e.target.value.replace(/\D/g, '');
+      if (number.length > 10 && !number.startsWith('91')) {
+        number = number.slice(0, 10);
+      }
+      if (number.length > 0) {
+        if (number.length <= 5) {
+          number = number.replace(/(\d{5})/, '$1-');
+        } else {
+          number = number.replace(/(\d{5})(\d{5})/, '$1-$2');
+        }
+      }
+      e.target.value = number;
+    });
+
+    // Payment logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const payCash = document.getElementById('payCash');
+      const payCard = document.getElementById('payCard');
+      const payUPI = document.getElementById('payUPI');
+      const cardSection = document.getElementById('cardSection');
+      const upiSection = document.getElementById('upiSection');
+      const paymentOptions = document.getElementById('paymentOptions');
+      const submitCard = document.getElementById('submitCard');
+      const backFromCard = document.getElementById('backFromCard');
+      const backFromUPI = document.getElementById('backFromUPI');
+      const backFromPaymentOptions = document.getElementById('backFromPaymentOptions');
+      const upiBtns = document.querySelectorAll('.upi-btn');
+      const toast = document.getElementById('toast');
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3500);
+      }
+      function goHomeWithToast() {
+        window.location.hash = '#home';
+        showToast('Successfully booked your appointment!');
+        // Optionally, reset payment UI
+        document.getElementById('paymentSection').style.display = 'none';
+        paymentOptions.style.display = 'flex';
+        cardSection.style.display = 'none';
+        upiSection.style.display = 'none';
+        // Show the contact form again after toast disappears
+        setTimeout(() => {
+          document.getElementById('contactForm').style.display = 'block';
+        }, 100);
+      }
+      if (payCash) payCash.onclick = goHomeWithToast;
+      // Disabled card payment functionality
+      // if (payCard) payCard.onclick = function() {
+      //   paymentOptions.style.display = 'none';
+      //   cardSection.style.display = 'block';
+      // };
+      // Disabled UPI payment functionality
+      // if (payUPI) payUPI.onclick = function() {
+      //   paymentOptions.style.display = 'none';
+      //   upiSection.style.display = 'block';
+      // };
+      if (submitCard) submitCard.onclick = function(e) {
+        e.preventDefault();
+        // You can add card validation here
+        goHomeWithToast();
+      };
+      if (backFromCard) backFromCard.onclick = function() {
+        cardSection.style.display = 'none';
+        paymentOptions.style.display = 'flex';
+      };
+      if (backFromUPI) backFromUPI.onclick = function() {
+        upiSection.style.display = 'none';
+        paymentOptions.style.display = 'flex';
+      };
+      if (backFromPaymentOptions) backFromPaymentOptions.onclick = function() {
+        document.getElementById('paymentSection').style.display = 'none';
+        document.getElementById('contactForm').style.display = 'block';
+      };
+      upiBtns.forEach(btn => {
+        btn.onclick = function() {
+          goHomeWithToast();
+        };
+      });
+    });
+
+    // Attorney Modal Functions
+    const attorneyData = {
+      nitin: {
+        name: "Nitin Sahadevan",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Nitin Sahadevan.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Nitin Sahadevan is a lawyer qualified from Mumbai University in the year 1993 and has been both an in-house counsel and external lawyer for over 30 years. His areas of expertise include providing corporate clients, nationally and internationally in multiple jurisdictions (a) Strategy, structuring, advice and support in business transactions in businesses engaged in manufacturing, research, information technology, real estate, supply chain and finance; (b) Negotiation, drafting and management of agreements, contracts and documents, high-value multi-jurisdictional transactions, contractual and negotiation such as mergers and acquisitions, sale and purchase of business assets, immovable property, routine business contracts, agreements and documents; (c) litigation strategy, advice and support across various jurisdictions, best approaches for dispute resolution, recovery matters and litigation in civil and criminal matters; (d) advice and guidance to corporates for developing legal policies and procedures by engaging with business stakeholders, external counsel, external business partners and advisors on various issues.</div>
+          </div>
+        `
+      },
+      arun: {
+        name: "Arun Darekar",
+        position: "Principal Consultant",
+        specialty: "Founder & Business Entrepreneur",
+        image: "static/images/Arjun Darekar.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Arun Darekar has been a businessman and entrepreneur for the past over 28 years. He has largely been engaged in the services and food verticals. His business acumen and pioneering activities have been recognised by various commercial and community enterprises. In his dealing with various clients and business partners he realised that there is a need for quality legal and compliance support. His clients and business associates had frequently expressed their requirements for expert legal advice and support. Considering this he decided to network and convene some of the finest minds in the legal and compliance domain by setting up Law Office. His goal is to ensure that Law Office evolves into all business houses' first choice for competent, timely and adept legal and compliance support. He is the founder and driving force of Law Office.</div>
+          </div>
+        `
+      },
+      pankaj: {
+        name: "Adv. Pankaj Ramashray Mishra",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Pankaj Mishra.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Pankaj Ramashray Mishra is a lawyer qualified from Mumbai University in the year 2018, and enrolled with the Bar Council of Maharashtra and Goa as well as the Bar Council of India Examination in the Year 2021. Being BSc Physics graduate prior to qualifying as a lawyer Pankaj brings a wider perspective while assessing issues at hand. While he handles a swathe of issues, he has expertise in real estate and immoveable property matters, within which he manages civil law, testamentary, probate, will, commercial disputes, co-operative housing society, development and redevelopment agreement, commercial disputes.</div>
+          </div>
+        `
+      },
+      sangram: {
+        name: "Sangram Bapat",
+        position: "Consultant",
+        specialty: "Legal Expert",
+        image: "static/images/Sangram Bapat.jpeg",
+        customHtml: `<div class='attorney-modal-section'><div class='attorney-modal-title'>About</div><div class='attorney-modal-text'>Sangram Bapat is a lawyer qualified from Mumbai University in the year 2015. He has a penchant and expertise in the area of recovery matters and commercial economic issues for his clients. For the past 15 years he has been extensively engaged in managing matters for clients who wish to recover monies. Further to this object of recovery and related areas, he has appeared in relevant courts and tribunals in the Mumbai Metropolitan area for dishonoured cheques matters, recovery and summary suits.</div></div>`
+      },
+      razia: {
+        name: "RAZIA B. SHAIKH",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Razia B. Shaikh.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Razia B. Shaikh is a lawyer qualified from Mumbai University in the year 2015. She has been handling private criminal matters specialized in criminal matters, family court matters, domestic violences matters in addition to recovery matters on the criminal side for her clients. Her motto and objectives have been to secure justice for her clients, provide proper guidance, legal advice and counsel to her clients. Razia believes her my passion and dedication towards her work has helped her achieve the best results for my clients for the last 25 years.</div>
+          </div>
+        `
+      },
+      sarika: {
+        name: "Sarika Tripathi",
+        position: "Consultant",
+        specialty: "",
+        image: "static/images/Sarika Tripathi.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Sarika Tripathi is a lawyer qualified from Mumbai University in the year 2015. With an experience ranging 15 years, she is a litigator with expertise and knowledge in the areas of civil, criminal and private litigation consisting of suits of various kinds such as partition suit, adverse possession, Rent Act suit, leave and license related suit at courts, Tribunals and competent authority forums across Mumbai, Vasai, Thane, Kalyan, CBD Belapur. She also manages registration related activities for Trust Deeds, Partnership Firm, trade mark, patent, leave and license registration, Sale agreement, POA, Will, Gift Deed, Testamentary Petition.</div>
+          </div>
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title" style="color: #2c3e50; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid #3498db;">🏛️ Legal Services Offered</div>
+            
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #3498db;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">⚖️ Labour / Industrial / Consumer Matters</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Handling of labour disputes, industrial conflicts, and consumer-related cases.</div>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">🏢 Civil, Commercial & Rent Act Suits</div>
+              <ul style="margin: 0; padding-left: 1.2rem; color: #555; line-height: 1.6;">
+                <li>Civil Suits</li>
+                <li>Commercial Disputes</li>
+                <li>Summary Proceedings</li>
+                <li>Rent Act Cases (Small Causes Courts / Competent Authorities)</li>
+              </ul>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #9b59b6;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">👨‍👩‍👧‍👦 Family Disputes</div>
+              <ul style="margin: 0; padding-left: 1.2rem; color: #555; line-height: 1.6;">
+                <li>Divorce</li>
+                <li>Child Custody</li>
+                <li>Maintenance</li>
+                <li>Domestic Violence</li>
+                <li>Other family-related legal matters</li>
+              </ul>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f39c12;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">📝 Registration & Inheritance</div>
+              <ul style="margin: 0; padding-left: 1.2rem; color: #555; line-height: 1.6;">
+                <li>Property Registration</li>
+                <li>Wills & Testamentary Documents</li>
+                <li>Probate & Letters of Administration (L.A.)</li>
+                <li>Succession Certificates</li>
+              </ul>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #1abc9c;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">📩 Legal Documentation</div>
+              <ul style="margin: 0; padding-left: 1.2rem; color: #555; line-height: 1.6;">
+                <li>Legal Notices</li>
+                <li>Legal Consultation & Advice</li>
+              </ul>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e67e22;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">🚔 Criminal Matters</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">All types of criminal cases and proceedings</div>
+            </div>
+
+            <div class="legal-service-item" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #27ae60;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">🗂️ Registration Services</div>
+              <ul style="margin: 0; padding-left: 1.2rem; color: #555; line-height: 1.6;">
+                <li>Public Trust Deed Registration</li>
+                <li>Partnership Firm Registration</li>
+                <li>Patent / Copyrights / NGO Registrations</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      sharad: {
+        name: "Sharad Evalekar",
+        position: "Consultant",
+        specialty: "Proprietor, Maxim Associates & Aadarsh Facilities Management Services",
+        image: "static/images/Sharad Evalekar.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Sharad Evalekar is a lawyer qualified from Mumbai University in the year 1993 and is the proprietor of Maxim Associates and Aadarsh Facilities Management Services. He specialises in the area of labour law and has for the past 30 years been handling various aspects of labour law such as matters pertaining to Employer's Provident Fund, Employees' State Insurance Corporation, Labour Laws compliances, labour and union relations, corporate labour issues and representation in Labour Commissioner cases. He heads a strong team of experienced professionals, who provide practical, compliant, and result-oriented solutions to businesses, ensuring smooth handling of statutory obligations and labour-related challenges.</div>
+          </div>
+        `
+      },
+      madhukar: {
+        name: "Madhukar",
+        position: "Coordinator",
+        specialty: "Client Relations & Administrative Coordination",
+        image: "static/images/madhukar.jpeg",
+        customHtml: `
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title">About</div>
+            <div class="attorney-modal-text">Madhukar serves as the Coordinator at LawOffice, ensuring seamless communication between clients and our expert legal team. With excellent organizational skills and attention to detail, Madhukar manages client relationships, schedules consultations, and coordinates legal proceedings. His dedication to client service excellence ensures that every client receives prompt attention and proper guidance throughout their legal journey.</div>
+          </div>
+          <div class="attorney-modal-section">
+            <div class="attorney-modal-title" style="color: #2c3e50; font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid #3498db;">🎯 Key Responsibilities</div>
+            
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #3498db;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📞 Client Communication</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Managing client inquiries, scheduling appointments, and ensuring smooth communication flow.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📅 Consultation Scheduling</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Coordinating paid consultations and managing appointment calendars for all consultants.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1.2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #9b59b6;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">📋 Administrative Support</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Handling documentation, follow-ups, and ensuring all administrative processes run efficiently.</div>
+            </div>
+
+            <div class="coordination-service-item" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f39c12;">
+              <div class="service-title" style="color: #2c3e50; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">🤝 Client Relations</div>
+              <div class="service-description" style="color: #555; line-height: 1.5;">Building and maintaining strong relationships with clients, ensuring satisfaction and trust.</div>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function openAttorneyModal(attorney) {
+      const modal = document.getElementById('attorneyModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      const attorneyInfo = attorneyData[attorney];
+
+      if (!attorneyInfo) return;
+
+      modalTitle.textContent = attorneyInfo.name + (attorneyInfo.position ? ` — ${attorneyInfo.position}` : '');
+      
+      modalContent.innerHTML = `
+        <div class="attorney-details">
+          <div class="attorney-image">
+            <img src="${attorneyInfo.image}" alt="${attorneyInfo.name}">
+          </div>
+          <div class="attorney-info">
+            <h3>${attorneyInfo.name}</h3>
+            <p class="position">${attorneyInfo.position}</p>
+          </div>
+          <div class="detail-section">
+            ${attorneyInfo.customHtml}
+          </div>
+        </div>
+      `;
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeAttorneyModal() {
+      const modal = document.getElementById('attorneyModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close modal when clicking outside
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('attorneyModal');
+      
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeAttorneyModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          closeAttorneyModal();
+        }
+      });
+    });
+
+    // Image Modal for Enlarged Attorney Photo
+    function openImageModal(imgSrc) {
+      var modal = document.getElementById('imageModal');
+      var modalImg = document.getElementById('modalLargeImage');
+      modalImg.src = imgSrc;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeImageModal() {
+      var modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    // Close image modal on click outside image
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageModal = document.getElementById('imageModal');
+      imageModal.addEventListener('click', function(e) {
+        if (e.target === imageModal) closeImageModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && imageModal.style.display === 'block') closeImageModal();
+      });
+    });
+
+    // Translation System
+    const translations = {
+      en: {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.services': 'Areas of Services and Expertise',
+        'nav.consultants': 'Our Consultants',
+        'nav.consultation': 'Paid Consultation',
+        'nav.contact': 'Contact Us',
+        
+        // Hero Section
+        'hero.title': 'Legal and Compliance Excellence',
+        'hero.description': 'Experienced and Aggressive domain specialists for all your legal and compliance needs',
+        'hero.consultation': 'Paid Consultation',
+        'hero.learnMore': 'Learn More',
+        
+        // Services Section
+        'services.title': 'Services and Expertise',
+        'services.corporate.title': 'Corporate Law',
+        'services.corporate.description': 'Expert guidance in business formation, contracts, and corporate governance.',
+        'services.civil.title': 'Civil Litigation',
+        'services.civil.description': 'Strong representation in civil disputes and litigation matters.',
+        'services.realestate.title': 'Real Estate Law',
+        'services.realestate.description': 'Comprehensive legal services for property transactions and disputes.',
+        'services.family.title': 'Family Law',
+        'services.family.description': 'Sensitive handling of divorce, custody, and family-related legal matters.',
+        
+        // Consultants Section
+        'consultants.title': 'Our Expert Consultants',
+        'consultants.knowMore': 'Know More',
+        
+        // Consultation Section
+        'consultation.title': 'Get Your Paid Consultation',
+        'consultation.description': 'Schedule a confidential consultation with our experienced professionals to discuss your legal needs.',
+        'consultation.benefit1': 'Professional consultation',
+        'consultation.benefit2': 'Experienced professionals',
+        'consultation.benefit3': 'Personalized legal strategy',
+        'consultation.benefit4': 'Flexible scheduling',
+        'consultation.schedule': 'Schedule Now',
+        
+        // Contact Section
+        'contact.title': 'Contact Us',
+        'contact.getInTouch': 'Get in Touch',
+        
+        // Form
+        'form.name': 'Full Name',
+        'form.email': 'Email',
+        'form.phone': 'Phone',
+        'form.serviceArea': 'Service Area',
+        'form.selectServiceArea': 'Select Service Area',
+        'form.message': 'Your Message',
+        'form.submit': 'Send Message via WhatsApp',
+        
+        // Footer
+        'footer.about': 'About LawOffice',
+        'footer.aboutDescription': 'We are dedicated to providing exceptional legal services with integrity and professionalism.',
+        'footer.quickLinks': 'Quick Links',
+        'footer.home': 'Home',
+        'footer.services': 'Areas of Services and Expertise',
+        'footer.consultants': 'Our Consultants',
+        'footer.contact': 'Contact',
+        'footer.followUs': 'Follow Us'
+      },
+      mr: {
+        // Navigation
+        'nav.home': 'मुख्यपृष्ठ',
+        'nav.services': 'सेवा आणि विशेषज्ञता क्षेत्रे',
+        'nav.consultants': 'आमचे विशेषज्ञ सल्लागार',
+        'nav.consultation': 'पैसे देऊन सल्ला',
+        'nav.contact': 'संपर्क साधा',
+        
+        // Hero Section
+        'hero.title': 'कायदेशीर आणि अनुपालन उत्कृष्टता',
+        'hero.description': 'तुमच्या सर्व कायदेशीर आणि अनुपालन गरजांसाठी अनुभवी आणि आक्रमक डोमेन विशेषज्ञ',
+        'hero.consultation': 'पैसे देऊन सल्ला',
+        'hero.learnMore': 'अधिक जाणून घ्या',
+        
+        // Services Section
+        'services.title': 'सेवा आणि विशेषज्ञता',
+        'services.corporate.title': 'कॉर्पोरेट कायदा',
+        'services.corporate.description': 'व्यवसाय निर्मिती, करार आणि कॉर्पोरेट शासनातील विशेषज्ञ मार्गदर्शन.',
+        'services.civil.title': 'दिवाणी खटला',
+        'services.civil.description': 'दिवाणी विवाद आणि खटल्यांमध्ये मजबूत प्रतिनिधित्व.',
+        'services.realestate.title': 'जमीन मालमत्ता कायदा',
+        'services.realestate.description': 'मालमत्ता व्यवहार आणि विवादांसाठी व्यापक कायदेशीर सेवा.',
+        'services.family.title': 'कौटुंबिक कायदा',
+        'services.family.description': 'घटस्फोट, पालकत्व आणि कौटुंबिक कायदेशीर बाबींचे संवेदनशील व्यवस्थापन.',
+        
+        // Consultants Section
+        'consultants.title': 'आमचे विशेषज्ञ सल्लागार',
+        'consultants.knowMore': 'अधिक जाणून घ्या',
+        
+        // Consultation Section
+        'consultation.title': 'तुमचा पैसे देऊन सल्ला मिळवा',
+        'consultation.description': 'तुमच्या कायदेशीर गरजांवर चर्चा करण्यासाठी आमच्या अनुभवी व्यावसायिकांसोबत गोपनीय सल्ला नियोजित करा.',
+        'consultation.benefit1': 'व्यावसायिक सल्ला',
+        'consultation.benefit2': 'अनुभवी व्यावसायिक',
+        'consultation.benefit3': 'वैयक्तिकृत कायदेशीर धोरण',
+        'consultation.benefit4': 'लवचिक वेळापत्रक',
+        'consultation.schedule': 'आता नियोजित करा',
+        
+        // Contact Section
+        'contact.title': 'संपर्क साधा',
+        'contact.getInTouch': 'संपर्क साधा',
+        
+        // Form
+        'form.name': 'पूर्ण नाव',
+        'form.email': 'ईमेल',
+        'form.phone': 'फोन',
+        'form.serviceArea': 'सेवा क्षेत्र',
+        'form.selectServiceArea': 'सेवा क्षेत्र निवडा',
+        'form.message': 'तुमचा संदेश',
+        'form.submit': 'WhatsApp द्वारे संदेश पाठवा',
+        
+        // Footer
+        'footer.about': 'LawOffice बद्दल',
+        'footer.aboutDescription': 'आम्ही सचोटी आणि व्यावसायिकतेसह उत्कृष्ट कायदेशीर सेवा प्रदान करण्यासाठी समर्पित आहोत.',
+        'footer.quickLinks': 'त्वरित दुवे',
+        'footer.home': 'मुख्यपृष्ठ',
+        'footer.services': 'सेवा आणि विशेषज्ञता क्षेत्रे',
+        'footer.consultants': 'आमचे सल्लागार',
+        'footer.contact': 'संपर्क',
+        'footer.followUs': 'आम्हाला फॉलो करा'
+      },
+      hi: {
+        // Navigation
+        'nav.home': 'होम',
+        'nav.services': 'सेवाएं और विशेषज्ञता क्षेत्र',
+        'nav.consultants': 'हमारे विशेषज्ञ सलाहकार',
+        'nav.consultation': 'भुगतान परामर्श',
+        'nav.contact': 'संपर्क करें',
+        
+        // Hero Section
+        'hero.title': 'कानूनी और अनुपालन उत्कृष्टता',
+        'hero.description': 'आपकी सभी कानूनी और अनुपालन आवश्यकताओं के लिए अनुभवी और आक्रामक डोमेन विशेषज्ञ',
+        'hero.consultation': 'भुगतान परामर्श',
+        'hero.learnMore': 'और जानें',
+        
+        // Services Section
+        'services.title': 'सेवाएं और विशेषज्ञता',
+        'services.corporate.title': 'कॉर्पोरेट कानून',
+        'services.corporate.description': 'व्यवसाय निर्माण, अनुबंध और कॉर्पोरेट शासन में विशेषज्ञ मार्गदर्शन।',
+        'services.civil.title': 'दीवानी मुकदमेबाजी',
+        'services.civil.description': 'दीवानी विवादों और मुकदमेबाजी मामलों में मजबूत प्रतिनिधित्व।',
+        'services.realestate.title': 'रियल एस्टेट कानून',
+        'services.realestate.description': 'संपत्ति लेन-देन और विवादों के लिए व्यापक कानूनी सेवाएं।',
+        'services.family.title': 'पारिवारिक कानून',
+        'services.family.description': 'तलाक, संरक्षण और पारिवारिक कानूनी मामलों का संवेदनशील प्रबंधन।',
+        
+        // Consultants Section
+        'consultants.title': 'हमारे विशेषज्ञ सलाहकार',
+        'consultants.knowMore': 'और जानें',
+        
+        // Consultation Section
+        'consultation.title': 'अपना भुगतान परामर्श प्राप्त करें',
+        'consultation.description': 'अपनी कानूनी आवश्यकताओं पर चर्चा करने के लिए हमारे अनुभवी पेशेवरों के साथ गोपनीय परामर्श शेड्यूल करें।',
+        'consultation.benefit1': 'पेशेवर परामर्श',
+        'consultation.benefit2': 'अनुभवी पेशेवर',
+        'consultation.benefit3': 'व्यक्तिगत कानूनी रणनीति',
+        'consultation.benefit4': 'लचीला शेड्यूलिंग',
+        'consultation.schedule': 'अभी शेड्यूल करें',
+        
+        // Contact Section
+        'contact.title': 'संपर्क करें',
+        'contact.getInTouch': 'संपर्क करें',
+        
+        // Form
+        'form.name': 'पूरा नाम',
+        'form.email': 'ईमेल',
+        'form.phone': 'फोन',
+        'form.serviceArea': 'सेवा क्षेत्र',
+        'form.selectServiceArea': 'सेवा क्षेत्र चुनें',
+        'form.message': 'आपका संदेश',
+        'form.submit': 'WhatsApp के माध्यम से संदेश भेजें',
+        
+        // Footer
+        'footer.about': 'LawOffice के बारे में',
+        'footer.aboutDescription': 'हम ईमानदारी और पेशेवरता के साथ उत्कृष्ट कानूनी सेवाएं प्रदान करने के लिए समर्पित हैं।',
+        'footer.quickLinks': 'त्वरित लिंक',
+        'footer.home': 'होम',
+        'footer.services': 'सेवाएं और विशेषज्ञता क्षेत्र',
+        'footer.consultants': 'हमारे सलाहकार',
+        'footer.contact': 'संपर्क',
+        'footer.followUs': 'हमें फॉलो करें'
+      }
+    };
+
+    let currentLanguage = 'en';
+
+    function translatePage(lang) {
+      if (lang === currentLanguage) return;
+      
+      currentLanguage = lang;
+      
+      // Update language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Add loading state
+      document.body.classList.add('translating');
+
+      // Translate all elements with data-translate attribute
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+
+      // Remove loading state
+      setTimeout(() => {
+        document.body.classList.remove('translating');
+      }, 300);
+    }
+
+    // Initialize language switcher
+    document.addEventListener('DOMContentLoaded', function() {
+      const langButtons = document.querySelectorAll('.lang-btn');
+      
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.dataset.lang;
+          translatePage(lang);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
